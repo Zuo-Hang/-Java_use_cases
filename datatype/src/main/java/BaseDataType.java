@@ -15,9 +15,13 @@ public class BaseDataType {
      * 4、布尔类型：boolean
      */
 
+    /**
+     * 字节 一个字节8个比特位
+     */
     void byteTest() {
         byte maxValue = Byte.MAX_VALUE;
         byte minValue = Byte.MIN_VALUE;
+//        String
         byte b1 = 9;
         System.out.println(b1 + "\t" + maxValue + "\t" + minValue);
     }
