@@ -27,10 +27,10 @@ public class ThreadPoolTest {
 
     /**
      * 正确使用：
-     * 1. 自己直接调用ThreadPoolExecutor的构造函数，给BlockQueue指定容量
-     *          一旦提交的线程数超过当前可用线程数时，就会抛出java.util.concurrent.RejectedExecutionException，
+     * 1. 自己直接调用 ThreadPoolExecutor 的构造函数，给 BlockQueue 指定容量
+     *          一旦提交的线程数超过当前可用线程数时，就会抛出 java.util.concurrent.RejectedExecutionException，
      *          这是因为当前线程池使用的队列是有边界队列，队列已经满了便无法继续处理新的请求
-     * 2. 开源类库，如apache和guava等
+     * 2. 开源类库，如 apache 和 guava 等
      */
 
 
@@ -41,6 +41,9 @@ public class ThreadPoolTest {
     private static ThreadFactory namedThreadFactory = new ThreadFactoryBuilder()
             .setNameFormat("demo-pool-%d").build();
 
+    /**
+     * guava
+     */
     private static ExecutorService pool = new ThreadPoolExecutor(5, 200,
             0L, TimeUnit.MILLISECONDS,
             new LinkedBlockingQueue<Runnable>(1024), namedThreadFactory, new ThreadPoolExecutor.AbortPolicy());
