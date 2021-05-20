@@ -5,7 +5,7 @@ import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import java.util.concurrent.*;
 
 /**
- * 测试使用Thread Pool
+ * 测试使用 Thread Pool
  * @Author zuo_h
  * @Date 11:36 2021/5/19
  */

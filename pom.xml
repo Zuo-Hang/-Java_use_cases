@@ -11,6 +11,7 @@
     <modules>
         <module>datatype</module>
         <module>ThreadTest</module>
+        <module>locktest</module>
     </modules>
 
 
